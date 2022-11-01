@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+    
+
+    <style>h1{
+        color:black;
+        font-size:40px;
+    }
+    </style>
+
+<form action="" method="post">
+    <h1>Расчет соотношения матрица-наполнитель</h1>
+    
+    <ul class="modules-list">
+      <li class="modules-list-item modules-list-item-1">
+        <h2 class="modules-list-title">Введите значения переменных</h2>
+        <ul class="modules-sublist">
+            <style>li{
+                color:green;
+                font-size:25px;
+            }
+            </style>
+          <li class="modules-sublist-item">Плотность, кг/м3                       <input type="float" name="param1" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Модуль упругости, ГПа                  <input type="float" name="param2" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Количество отвердителя, м.%            <input type="float" name="param3" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Содержание эпоксидных групп,%_2        <input type="float" name="param4" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Температура вспышки, С_2               <input type="float" name="param5" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Поверхностная плотность, г/м2          <input type="float" name="param6" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Модуль упругости при растяжении, ГПа   <input type="float" name="param7" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Прочность при растяжении, МПа          <input type="float" name="param8" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Потребление смолы, г/м2                <input type="float" name="param9" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Угол нашивки, град                     <input type="float" name="param10" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Шаг нашивки                            <input type="float" name="param11" placeholder="Введите значение"></li>
+          <li class="modules-sublist-item">Плотность нашивки                      <input type="float" name="param12" placeholder="Введите значение"></li>
+          <p>
+            <input type="submit">
+            </p>
+        </ul>
+           
+
+    <h1>Результат прогноза: {{message}}</h1>
+        {% if error %}
+    <h1>Ошибка в переменной " {{error['name']}} ", невозможно преобразовать в число значение " {{error['value']}} "</h1>
+        {% endif %}
+       
+      </li>
+      
+    </ul>
+   
+
+      </form>
+  </div>
+
+</body>
+</html>
